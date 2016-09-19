@@ -1,0 +1,25 @@
+.master-ct{
+  padding: 50px 100px;
+}
+.lobby-ct{
+  margin: auto;
+  padding: 20px 30px;
+  width: 800px;
+  height: 400px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+}
+
+.start-ct{
+  padding: 10px 50px;
+}
+.player-round{
+  border: 1px #959595 solid;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+/*GENERAL*/
+.align-center{
+  text-align: center;
+}

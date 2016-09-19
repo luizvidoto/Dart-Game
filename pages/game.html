@@ -1,0 +1,37 @@
+<div class="game-ct">
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Rodada</th>
+            <th class="align-center" ng-repeat="pl in players">{{pl.name}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="rd in rounds">
+            <td>{{rd+1}}</td>
+            <td class="align-center" ng-repeat="pl in players">
+              <!-- <span class="player-round" ng-show="!pl.rounds[rd].edit" ng-click="editRound(pl, rd)">
+                {{pl.rounds[rd].total}}
+              </span> -->
+              <input type="text" class="form-control" ng-model="pl.rounds[rd].total" ng-modelOptions="{}" ng-blur="makeTotal(pl)">
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Total</td>
+            <td ng-repeat="pl in players"><span>{{pl.totalScore}}</span></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+
+  <div class="">
+    <div class="btn btn-primary" ui-sref="lobby">
+      Voltar
+    </div>
+  </div>
+</div>

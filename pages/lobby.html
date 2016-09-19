@@ -1,0 +1,32 @@
+<h1 class="align-center">DART GAME</h1>
+<div ng-show="state === 'lobby'" class="lobby-ct">
+  <form>
+    <div class="row player-ct-add">
+      <div class="col-md-10">
+        <input class="form-control" type="text" placeholder="Nome" ng-model="playerName">
+      </div>
+      <div class="col-md-2">
+        <div class="add-player">
+          <input type="submit" class="btn btn-block btn-success" ng-click="addPlayer(playerName)" value="+">
+        </div>
+      </div>
+    </div>
+  </form>
+  <div class="row player-ct-list">
+    <div class="col-md-12">
+      <div class="row player-ct" ng-show="players.length">
+        <div class="col-md-12">
+          <h3>Jogadores</h3>
+          <ul>
+            <li ng-repeat="pl in players">{{pl.name}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="start-ct" ng-show="players.length">
+    <div class="btn btn-block btn-success" ng-click="startGame(players)">
+      <h2>Começar!</h2>
+    </div>
+  </div>
+</div>
